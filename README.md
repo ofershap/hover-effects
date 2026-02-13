@@ -1,18 +1,27 @@
 # hover-effects
 
-[![npm version](https://img.shields.io/npm/v/hover-effects-ts)](https://www.npmjs.com/package/hover-effects-ts)
-[![npm downloads](https://img.shields.io/npm/dm/hover-effects-ts)](https://www.npmjs.com/package/hover-effects-ts)
-[![license](https://img.shields.io/npm/l/hover-effects-ts)](https://github.com/ofershap/hover-effects/blob/main/LICENSE)
+[![npm version](https://img.shields.io/npm/v/hover-effects-canvas.svg)](https://www.npmjs.com/package/hover-effects-canvas)
+[![npm downloads](https://img.shields.io/npm/dm/hover-effects-canvas.svg)](https://www.npmjs.com/package/hover-effects-canvas)
 [![CI](https://github.com/ofershap/hover-effects/actions/workflows/ci.yml/badge.svg)](https://github.com/ofershap/hover-effects/actions/workflows/ci.yml)
+[![TypeScript](https://img.shields.io/badge/TypeScript-strict-blue.svg)](https://www.typescriptlang.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Canvas-based hover effects for images. ASCII art, pixelate, glitch, blur. Zero dependencies. ~3KB.
+
+```typescript
+import { HoverEffect, pixelate } from "hover-effects-canvas";
+
+new HoverEffect({ element: document.querySelector("#photo"), effect: pixelate(10) });
+```
+
+> Drop-in image hover effects powered by Canvas2D. Four built-in effects, custom effect API, no dependencies.
 
 ![Demo](assets/demo.gif)
 
 ## Install
 
 ```bash
-npm install hover-effects-ts
+npm install hover-effects-canvas
 ```
 
 ## Quick Start
@@ -22,7 +31,7 @@ npm install hover-effects-ts
 ```
 
 ```typescript
-import { HoverEffect, pixelate } from "hover-effects-ts";
+import { HoverEffect, pixelate } from "hover-effects-canvas";
 
 new HoverEffect({
   element: document.querySelector("#photo"),
@@ -37,7 +46,7 @@ Hover the image to see it pixelate. Mouse out to restore.
 ### Pixelate
 
 ```typescript
-import { pixelate } from "hover-effects-ts";
+import { pixelate } from "hover-effects-canvas";
 
 pixelate(10); // block size in pixels (default: 10)
 ```
@@ -45,7 +54,7 @@ pixelate(10); // block size in pixels (default: 10)
 ### ASCII
 
 ```typescript
-import { ascii } from "hover-effects-ts";
+import { ascii } from "hover-effects-canvas";
 
 ascii({ fontSize: 8, chars: " .:-=+*#%@" });
 ```
@@ -53,7 +62,7 @@ ascii({ fontSize: 8, chars: " .:-=+*#%@" });
 ### Glitch
 
 ```typescript
-import { glitch } from "hover-effects-ts";
+import { glitch } from "hover-effects-canvas";
 
 glitch({ slices: 20, offset: 30 });
 ```
@@ -61,7 +70,7 @@ glitch({ slices: 20, offset: 30 });
 ### Blur
 
 ```typescript
-import { blur } from "hover-effects-ts";
+import { blur } from "hover-effects-canvas";
 
 blur(8); // radius in pixels (default: 8)
 ```
@@ -71,7 +80,7 @@ blur(8); // radius in pixels (default: 8)
 Create your own effect by implementing the `EffectFn` type:
 
 ```typescript
-import { HoverEffect, type EffectFn } from "hover-effects-ts";
+import { HoverEffect, type EffectFn } from "hover-effects-canvas";
 
 const invert: EffectFn = ({ ctx, image, width, height }) => {
   ctx.drawImage(image, 0, 0, width, height);
@@ -100,16 +109,6 @@ new HoverEffect({ element: img, effect: invert });
 | --------------- | ------------------------------------- |
 | `setEffect(fn)` | Switch to a different effect          |
 | `destroy()`     | Remove canvas, restore original image |
-
-### `useSpotlight` Hook (headless)
-
-For React integration, use the `EffectFn` type with a canvas ref.
-
-## Other Projects
-
-- [spotlight-card](https://github.com/ofershap/spotlight-card) — Animated spotlight card for React
-- [ts-result](https://github.com/ofershap/ts-result) — Rust-style Result<T, E> for TypeScript
-- [ts-nano-event](https://github.com/ofershap/ts-nano-event) — Typed event emitter in <200 bytes
 
 ## License
 

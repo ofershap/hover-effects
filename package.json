@@ -1,6 +1,6 @@
 {
-  "name": "hover-effects-ts",
-  "version": "0.0.0-development",
+  "name": "hover-effects-canvas",
+  "version": "1.0.0",
   "description": "Canvas-based hover effects for images — ASCII, pixelate, glitch, blur. Zero dependencies.",
   "type": "module",
   "exports": {
