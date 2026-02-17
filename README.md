@@ -110,6 +110,13 @@ new HoverEffect({ element: img, effect: invert });
 | `setEffect(fn)` | Switch to a different effect          |
 | `destroy()`     | Remove canvas, restore original image |
 
+## Author
+
+**Ofer Shapira**
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/ofershap)
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=flat&logo=github&logoColor=white)](https://github.com/ofershap)
+
 ## License
 
 MIT
