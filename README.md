@@ -11,7 +11,10 @@ Canvas-based hover effects for images. ASCII art, pixelate, glitch, blur. Zero d
 ```typescript
 import { HoverEffect, pixelate } from "hover-effects-canvas";
 
-new HoverEffect({ element: document.querySelector("#photo"), effect: pixelate(10) });
+new HoverEffect({
+  element: document.querySelector("#photo"),
+  effect: pixelate(10),
+});
 ```
 
 > Drop-in image hover effects powered by Canvas2D. Four built-in effects, custom effect API, no dependencies.
