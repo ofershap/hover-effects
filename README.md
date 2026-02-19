@@ -1,4 +1,4 @@
-# hover-effects
+# Hover Effects — Canvas-Based Image Hover Effects (ASCII, Pixelate, Glitch, Blur)
 
 [![npm version](https://img.shields.io/npm/v/hover-effects-canvas.svg)](https://www.npmjs.com/package/hover-effects-canvas)
 [![npm downloads](https://img.shields.io/npm/dm/hover-effects-canvas.svg)](https://www.npmjs.com/package/hover-effects-canvas)
@@ -6,7 +6,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-strict-blue.svg)](https://www.typescriptlang.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Canvas-based hover effects for images. ASCII art, pixelate, glitch, blur. Zero dependencies. ~3KB.
+Drop-in canvas-based hover effects for images — ASCII art, pixelate, glitch, blur. TypeScript, zero dependencies, ~3KB.
 
 ```typescript
 import { HoverEffect, pixelate } from "hover-effects-canvas";
@@ -19,7 +19,7 @@ new HoverEffect({
 
 > Drop-in image hover effects powered by Canvas2D. Four built-in effects, custom effect API, no dependencies.
 
-![Demo](assets/demo.gif)
+![hover-effects demo — ASCII art, pixelate, glitch, and blur effects on image hover](assets/demo.gif)
 
 ## Install
 
